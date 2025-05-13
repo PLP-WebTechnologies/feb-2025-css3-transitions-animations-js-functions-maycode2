@@ -1,0 +1,74 @@
+:root {
+  --bg-light: #f0f0f0;
+  --bg-dark: #1e1e1e;
+  --text-light: #000;
+  --text-dark: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease;
+}
+
+.like-btn, .theme-btn {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.like-btn.liked {
+  background-color: #ff4d4d;
+  color: white;
+  animation: pulse 0.4s;
+}
+
+.theme-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
